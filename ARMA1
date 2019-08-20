@@ -1,0 +1,58 @@
+//Spawn helper function
+void SpawnObject( string type, vector position, vector orientation )
+{
+    auto obj = GetGame().CreateObject( type, position );
+    obj.SetPosition( position );
+    obj.SetOrientation( orientation );
+    obj.SetOrientation( obj.GetOrientation() ); //Collision fix
+    obj.Update();
+    obj.SetAffectPathgraph( true, false );
+    if( obj.CanAffectPathgraph() ) GetGame().GetCallQueue( CALL_CATEGORY_SYSTEM ).CallLater( GetGame().UpdatePathgraphRegionByObject, 100, false, obj );
+}
+
+//Your custom spawned objects
+SpawnObject( "bldr_wall_indcnc_10", "8656.585938 109.913002 12836.700195", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8678.411133 109.913002 12841.099609", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8692.564453 109.612984 12809.246094", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8673.345703 109.913002 12776.201172", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8643.508789 109.212997 12761.629883", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8651.832031 109.913002 12834.595703", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8619.582031 109.913002 12805.750977", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8626.614258 109.913002 12789.789063", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8649.768555 109.562981 12764.697266", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8681.336914 109.913002 12780.099609", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8696.966797 109.162956 12787.741211", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8681.994141 109.913002 12833.085938", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8623.309570 109.913002 12821.912109", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8672.849609 109.913002 12843.975586", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8689.000977 109.712990 12817.200195", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8657.708008 109.913002 12768.579102", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8630.199219 109.913002 12781.730469", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8638.200195 109.062950 12763.687500", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8639.897461 109.913002 12829.291992", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8616.116211 109.913002 12813.510742", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8623.089844 109.913002 12797.763672", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8633.340820 109.913002 12774.622070", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8699.609375 109.162956 12793.534180", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8696.150391 109.612984 12801.287109", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8631.419922 109.913002 12825.519531", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8660.791992 109.913002 12838.570313", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8668.583984 109.913002 12842.063477", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8635.439453 109.913002 12827.315430", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8617.842773 109.913002 12819.476563", "-24.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8685.510742 109.712997 12825.059570", "66.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8689.290039 109.913002 12783.992188", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8665.332031 109.913002 12772.309570", "-26.000000 0.000000 0.000000" );
+SpawnObject( "bldr_wall_indcnc_10", "8636.386719 109.662987 12767.701172", "66.000000 0.000000 0.000000" );
+SpawnObject( "Rope", "8684.413086 104.907921 12824.464844", "163.162796 0.981465 -1.568807" );
+SpawnObject( "Land_Mil_GuardTower", "8640.857422 111.164391 12769.666016", "-10.000003 0.000000 0.000000" );
+SpawnObject( "Land_Mil_GuardTower", "8694.620117 110.754272 12795.062500", "-26.000004 1.000000 0.000000" );
+SpawnObject( "Land_Mil_GuardTower", "8621.001953 111.123306 12812.184570", "157.000031 0.000000 0.000000" );
+SpawnObject( "Land_Mil_GuardTower", "8678.432617 111.125504 12831.541992", "156.999954 0.000000 0.000000" );
+SpawnObject( "Land_Mil_Fortified_Nest_Small", "8678.751953 115.897385 12811.602539", "-116.999954 0.000000 0.000000" );
+SpawnObject( "Land_Mil_Fortified_Nest_Small", "8648.691406 115.897385 12823.356445", "153.000000 0.000000 0.000000" );
+SpawnObject( "Land_Mil_Fortified_Nest_Small", "8629.744141 115.897385 12814.346680", "108.000031 0.000000 0.000000" );
+SpawnObject( "Land_Mil_Fortified_Nest_Small", "8669.029297 115.897385 12831.796875", "-162.000015 0.000000 0.000000" );
+SpawnObject( "Land_Mil_Fortified_Nest_Small", "8686.377930 115.897385 12792.930664", "-66.000000 0.000000 0.000000" );
+SpawnObject( "Land_Misc_Well_Pump_Yellow", "8675.500000 105.975647 12823.025391", "-169.000000 0.000000 0.000000" );
+SpawnObject( "Land_FuelStation_Feed", "8652.041016 105.833939 12823.220703", "68.000000 0.000000 0.000000" );
