@@ -1,0 +1,47 @@
+//Spawn helper function
+void SpawnObject( string type, vector position, vector orientation )
+{
+    auto obj = GetGame().CreateObject( type, position );
+    obj.SetPosition( position );
+    obj.SetOrientation( orientation );
+    obj.SetOrientation( obj.GetOrientation() ); //Collision fix
+    obj.Update();
+    obj.SetAffectPathgraph( true, false );
+    if( obj.CanAffectPathgraph() ) GetGame().GetCallQueue( CALL_CATEGORY_SYSTEM ).CallLater( GetGame().UpdatePathgraphRegionByObject, 100, false, obj );
+}
+
+//Your custom spawned objects
+SpawnObject( "Land_Castle_Gate", "6313.538574 262.664185 13589.873047", "-36.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6283.080078 260.271362 13560.848633", "-38.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6323.239258 256.519806 13493.740234", "145.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6356.906250 259.093842 13516.893555", "145.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6373.336914 260.640900 13528.493164", "145.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6374.963867 262.147522 13542.271484", "62.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6346.393066 267.861084 13597.437500", "62.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6365.434082 263.769409 13560.670898", "62.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6355.945801 265.970886 13578.936523", "62.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6340.003906 257.229767 13505.028320", "145.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6310.383301 254.671524 13496.729492", "-121.999931 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6299.581543 255.989273 13514.349609", "-122.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6279.523438 258.784668 13547.806641", "-122.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6289.735840 257.194244 13530.510742", "-122.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Bergfrit", "6284.924316 258.210541 13553.977539", "-125.999931 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Bergfrit", "6338.364258 264.550110 13594.518555", "-126.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Bergfrit", "6317.436523 253.620941 13499.329102", "55.000000 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Bergfrit", "6371.714355 258.954315 13533.170898", "56.999989 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6333.687988 266.011658 13598.763672", "-35.000004 0.000000 0.000000" );
+SpawnObject( "Land_Castle_Wall1_20", "6299.690918 261.669983 13573.639648", "-38.000004 0.000000 0.000000" );
+SpawnObject( "Land_Garage_Row_Big", "6344.299805 257.803802 13518.689453", "145.000000 0.000000 5.000000" );
+SpawnObject( "Land_Mil_Barracks_Round", "6303.124512 252.684341 13516.748047", "147.000031 0.000000 0.000000" );
+SpawnObject( "Land_Mil_Barracks_Round", "6296.010254 253.726044 13529.195313", "147.000015 0.000000 0.000000" );
+SpawnObject( "Land_Camp_House_brown", "6351.671875 261.314026 13570.739258", "58.999989 0.000000 0.000000" );
+SpawnObject( "Land_Camp_House_brown", "6355.469238 260.656860 13564.784180", "59.000000 0.000000 0.000000" );
+SpawnObject( "Land_Camp_House_brown", "6358.977051 260.043243 13559.002930", "59.000000 0.000000 0.000000" );
+SpawnObject( "Land_Misc_Well_Pump_Blue", "6352.909180 258.152161 13559.691406", "155.000015 0.000000 0.000000" );
+SpawnObject( "bldr_panel_concrete_1", "6310.636230 265.413940 13593.583984", "53.999992 0.000000 90.000000" );
+SpawnObject( "bldr_panel_concrete_1", "6317.466797 265.371033 13584.480469", "53.000050 0.000000 90.000000" );
+SpawnObject( "bldr_panel_concrete_1", "6320.500000 263.316254 13502.693359", "0.000000 0.000000 0.000000" );
+SpawnObject( "bldr_panel_concrete_1", "6320.500000 263.316254 13502.693359", "0.000000 0.000000 0.000000" );
+SpawnObject( "bldr_panel_concrete_1", "6308.178711 265.976349 13579.289063", "143.000092 90.000000 179.999985" );
+SpawnObject( "bldr_panel_concrete_1", "6325.677734 268.614655 13592.031250", "-31.999947 90.000000 -0.000009" );
+SpawnObject( "Land_FuelStation_Feed", "6353.751465 258.409546 13558.042969", "-111.999969 0.000000 0.000000" );
